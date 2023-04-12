@@ -11,7 +11,7 @@ class Chatgpt < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Darwin_arm64.tar.gz"
-      sha256 "55a9a3e516a6de644642e5fe577a8fa9b3a89b75d2506ba7685a3209c086f7bf"
+      sha256 "a05690d7e9f28ed4cc5e66f2d73e696e6befda214a88f76393c363c50545f943"
 
       def install
         bin.install "chatgpt"
@@ -19,7 +19,7 @@ class Chatgpt < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Darwin_x86_64.tar.gz"
-      sha256 "731fd76c7d7529e19a3f391b44852bb35a2a088290307e06f89ee697648c3321"
+      sha256 "e96a5f10fc68a5e2f84ad5602ce589cda48408b31dd786633607e1f36e78e0fb"
 
       def install
         bin.install "chatgpt"
@@ -28,17 +28,17 @@ class Chatgpt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Linux_arm64.tar.gz"
-      sha256 "d59aa85a00983a5a722dddd4cb55c23462601a0c03140d93485bd87666b2bbad"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Linux_x86_64.tar.gz"
+      sha256 "b54743bad23ab3f1d5a0a6164e64e87da6cd2019cdae98620ebb97b679a59360"
 
       def install
         bin.install "chatgpt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Linux_x86_64.tar.gz"
-      sha256 "e3508b103ac58d179b9f0c8fa3edbeed8fc8484b085a692a6c4d53d99eb27c77"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/quantonganh/chatgpt/releases/download/v0.0.4/chatgpt_Linux_arm64.tar.gz"
+      sha256 "c0c7af2e596b988cbdf736656388f6ebe216363367d2edc838e267240284895c"
 
       def install
         bin.install "chatgpt"
