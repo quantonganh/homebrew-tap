@@ -9,38 +9,42 @@ class HelixWezterm < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_x86_64.tar.gz"
-      sha256 "81cf1c796de2fc89e0b836039a84736a5083262bfb20db3763dd85e6099b142a"
+    if Hardware::CPU.arm?
+      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_arm64.tar.gz"
+      sha256 "032c85d564d1c594e90d0b8836cc1e3d3d82239e2a3fe91537d827ac0a5b3f80"
 
       def install
+        bin.install "helix-fzf"
         bin.install "helix-wezterm"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_arm64.tar.gz"
-      sha256 "b93c045b047e0bbfea3107111d39d7836e12f4cfc446be3646bea6593c61126f"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_x86_64.tar.gz"
+      sha256 "1c9eefe461e2cf5c301a3f3600fe2b39c03fa096a6e204532470c24e1d54dd10"
 
       def install
+        bin.install "helix-fzf"
         bin.install "helix-wezterm"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_x86_64.tar.gz"
-      sha256 "d2ce13c5113fb597433825606a3027754cf5a37beaf37aa8c70c1fba9c42b70e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_arm64.tar.gz"
+      sha256 "af751221084d27a3537bd5959734079371ae76a948c179b48dfe0dd975eed210"
 
       def install
+        bin.install "helix-fzf"
         bin.install "helix-wezterm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_arm64.tar.gz"
-      sha256 "4b09b27a10544a742da1de531c4f0bb1eaff7b5cdea926ba692610d874096774"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_x86_64.tar.gz"
+      sha256 "086cca7e51351c3750b346fd4c296db872162a0caf318cdd91a859e920f61405"
 
       def install
+        bin.install "helix-fzf"
         bin.install "helix-wezterm"
       end
     end
