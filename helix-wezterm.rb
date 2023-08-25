@@ -7,41 +7,12 @@ class HelixWezterm < Formula
   homepage "https://github.com/quantonganh/helix-wezterm"
   version "0.0.1"
   license "MIT"
+  depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_arm64.tar.gz"
-      sha256 "032c85d564d1c594e90d0b8836cc1e3d3d82239e2a3fe91537d827ac0a5b3f80"
-
-      def install
-        bin.install "helix-fzf"
-        bin.install "helix-wezterm"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_x86_64.tar.gz"
-      sha256 "1c9eefe461e2cf5c301a3f3600fe2b39c03fa096a6e204532470c24e1d54dd10"
-
-      def install
-        bin.install "helix-fzf"
-        bin.install "helix-wezterm"
-      end
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_arm64.tar.gz"
-      sha256 "af751221084d27a3537bd5959734079371ae76a948c179b48dfe0dd975eed210"
-
-      def install
-        bin.install "helix-fzf"
-        bin.install "helix-wezterm"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Linux_x86_64.tar.gz"
-      sha256 "086cca7e51351c3750b346fd4c296db872162a0caf318cdd91a859e920f61405"
+      sha256 "26a857e1eca477a9910af62e0f279a1c5d6f4620615937149335fcdb4af64c02"
 
       def install
         bin.install "helix-fzf"
