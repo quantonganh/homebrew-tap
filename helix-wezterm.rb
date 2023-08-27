@@ -12,7 +12,7 @@ class HelixWezterm < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.1/helix-wezterm_Darwin_arm64.tar.gz"
-      sha256 "2f4fde0ec0d81d143d1a4ccebde3a613c8221b8ddd3fcf04302378a1161f1075"
+      sha256 "46d3358b17e0099eb6f894036d4b287cb7b3c9fb6657e369ba11433fcf511f4f"
 
       def install
         bin.install "helix-fzf.sh"
