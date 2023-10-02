@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.8.0 at 2023-10-02T08:19:52.310665955Z
+# Generated with JReleaser 1.8.0 at 2023-10-02T08:27:49.569058681Z
 class TetrisTui < Formula
   desc "Play tetris in the terminal"
   homepage "https://github.com/quantonganh/tetris-tui/"
