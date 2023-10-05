@@ -9,17 +9,17 @@ class ChatgptTui < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Darwin_arm64.tar.gz"
-      sha256 "cc4fa1928275ab01e53817ea43bab3313b09ba9dadc5bb965a37b62c725e3275"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Darwin_x86_64.tar.gz"
+      sha256 "28f7fa4513d3e72924ef143240eb34aeb32b77d2963d4cd2d41e92c7f61d1fde"
 
       def install
         bin.install "chatgpt-tui"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Darwin_x86_64.tar.gz"
-      sha256 "e38f8dedf19d6097def136d69179e3d1814eaed6f0f446c4b86557d747e1bb33"
+    if Hardware::CPU.arm?
+      url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Darwin_arm64.tar.gz"
+      sha256 "defcb9fa11a56130310cb8d53d3d6fa9d14c4c56f961e65fcdce9f1d1c1f0065"
 
       def install
         bin.install "chatgpt-tui"
@@ -30,7 +30,7 @@ class ChatgptTui < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Linux_arm64.tar.gz"
-      sha256 "c6649f30133ef35056cc2603a1c97982a41fba3009d0e4f929ca660d507fbf5e"
+      sha256 "6ad76905b93bf0346687caae8ff6f1715dc3ae1555e25f9a8969ca892bc8ebf5"
 
       def install
         bin.install "chatgpt-tui"
@@ -38,7 +38,7 @@ class ChatgptTui < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/quantonganh/chatgpt-tui/releases/download/v0.0.7/chatgpt-tui_Linux_x86_64.tar.gz"
-      sha256 "c9b7002f00f47e54da96fb8385ea60beebedf960038b378dc7f12fdb0d131872"
+      sha256 "7c795f86a9244f176bc209c2e74ae62b99d51fffbca99b1d949163d003bf4796"
 
       def install
         bin.install "chatgpt-tui"
