@@ -5,21 +5,21 @@
 class SnippetsLs < Formula
   desc "A simple language server to just insert snippets into Helix."
   homepage "https://github.com/quantonganh/snippets-ls"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.2/snippets-ls_Darwin_x86_64.tar.gz"
-      sha256 "d12901ff246f5d9788406a61a1123ede1cf82ace2cfbe6e4d4c58c046ec3eb03"
+    if Hardware::CPU.arm?
+      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.3/snippets-ls_Darwin_arm64.tar.gz"
+      sha256 "76f81387c772a4b13405354f17e380032a37e17e5cc5252f0ac4ae1ab6264a53"
 
       def install
         bin.install "snippets-ls"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.2/snippets-ls_Darwin_arm64.tar.gz"
-      sha256 "559c03a02f31e277d6b1d75ed044f677f5fef6d1bb4ac7226536f58d9e144170"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.3/snippets-ls_Darwin_x86_64.tar.gz"
+      sha256 "38ad77aa54c6815538677d8654e0922edeb34d688586838b0d55d2de1b293fe0"
 
       def install
         bin.install "snippets-ls"
@@ -29,16 +29,16 @@ class SnippetsLs < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.2/snippets-ls_Linux_x86_64.tar.gz"
-      sha256 "8e25d687c4a294ec91b7f2ae414096594d2f35e789bdce7c881710f3cc0a073f"
+      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.3/snippets-ls_Linux_x86_64.tar.gz"
+      sha256 "dfebf73706393c0b56f823dae808d7856e78dfa25cad26525e149653f34c7bf0"
 
       def install
         bin.install "snippets-ls"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.2/snippets-ls_Linux_arm64.tar.gz"
-      sha256 "2483bbb6b0366e74ff0d2741869154423fddbcc9f55aac49ba52f66fd75a05fe"
+      url "https://github.com/quantonganh/snippets-ls/releases/download/v0.0.3/snippets-ls_Linux_arm64.tar.gz"
+      sha256 "f5c42945029a0ad3b0d0ff535a8ebc6f899bcc1abad081a127a5b64f27e8501c"
 
       def install
         bin.install "snippets-ls"
