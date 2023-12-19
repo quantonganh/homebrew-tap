@@ -5,21 +5,21 @@
 class Geohash < Formula
   desc "Encode and decode Geohashes."
   homepage "https://github.com/quantonganh/geohash"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.1/geohash_Darwin_arm64.tar.gz"
-      sha256 "2d470fd56e23b6be6194b104c6aac480af58e70c17892d8f25a0e69609dfe3ba"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Darwin_x86_64.tar.gz"
+      sha256 "4e7ad9b77995a188b3b1af61f802f0af1b373adb3ba889df1b30808c34ea5ddb"
 
       def install
         bin.install "geohash"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.1/geohash_Darwin_x86_64.tar.gz"
-      sha256 "4225ed26d0b128e60579ff0a4880561ece5aed58027ba107c006fbcdac416e99"
+    if Hardware::CPU.arm?
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Darwin_arm64.tar.gz"
+      sha256 "53c5ac005512b15ccbee4f9f10b534499a946238cecdf0793b86b086fd137b2c"
 
       def install
         bin.install "geohash"
@@ -28,17 +28,17 @@ class Geohash < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.1/geohash_Linux_x86_64.tar.gz"
-      sha256 "02af9c1abfa387820a90cf9f7364581a0033e60c21bf11b66eec2c79d8b6ef7b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Linux_arm64.tar.gz"
+      sha256 "5a9b71f3f34f9cbe647670fa8ab47659adf8c0992cbd35764cea869288874db4"
 
       def install
         bin.install "geohash"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.1/geohash_Linux_arm64.tar.gz"
-      sha256 "c5997cbeaf63da65bd92941ac764b8d46418024cc0b87677f5a02072bbfbc0f2"
+    if Hardware::CPU.intel?
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Linux_x86_64.tar.gz"
+      sha256 "fa3e43407e62d734865b060d92562316e45a4ead58e6f54262a2ba1fe61f5b74"
 
       def install
         bin.install "geohash"
