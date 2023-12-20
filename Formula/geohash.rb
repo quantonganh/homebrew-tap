@@ -5,21 +5,21 @@
 class Geohash < Formula
   desc "Encode and decode Geohashes."
   homepage "https://github.com/quantonganh/geohash"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Darwin_x86_64.tar.gz"
-      sha256 "4e7ad9b77995a188b3b1af61f802f0af1b373adb3ba889df1b30808c34ea5ddb"
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.3/geohash_Darwin_x86_64.tar.gz"
+      sha256 "6ef5839b1476357c39b5e90289e5a740cc779068c40facac687b12ea1b82b274"
 
       def install
         bin.install "geohash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Darwin_arm64.tar.gz"
-      sha256 "53c5ac005512b15ccbee4f9f10b534499a946238cecdf0793b86b086fd137b2c"
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.3/geohash_Darwin_arm64.tar.gz"
+      sha256 "ed4f60f37c0068ca065b72f148778fa49c37ca4a02a4f4fb9d5a7e7cad274061"
 
       def install
         bin.install "geohash"
@@ -29,16 +29,16 @@ class Geohash < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Linux_arm64.tar.gz"
-      sha256 "5a9b71f3f34f9cbe647670fa8ab47659adf8c0992cbd35764cea869288874db4"
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.3/geohash_Linux_arm64.tar.gz"
+      sha256 "4dba467b498e0f5e434bada1c6d7e66db63698b1d27879706d074ad28e68e006"
 
       def install
         bin.install "geohash"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/geohash/releases/download/v0.0.2/geohash_Linux_x86_64.tar.gz"
-      sha256 "fa3e43407e62d734865b060d92562316e45a4ead58e6f54262a2ba1fe61f5b74"
+      url "https://github.com/quantonganh/geohash/releases/download/v0.0.3/geohash_Linux_x86_64.tar.gz"
+      sha256 "877a6682b138ac411b63e7c8de15e5e6000bf05f6c1c40f0d8117192460e4664"
 
       def install
         bin.install "geohash"
