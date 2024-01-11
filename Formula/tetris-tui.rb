@@ -1,26 +1,26 @@
-# Generated with JReleaser 1.10.0 at 2024-01-09T14:33:59.153971095Z
+# Generated with JReleaser 1.10.0 at 2024-01-11T05:58:09.171498226Z
 
 class TetrisTui < Formula
   desc "Play tetris in the terminal"
   homepage "https://github.com/quantonganh/tetris-tui/"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.0/tetris-tui-0.2.0-aarch64-unknown-linux-gnu.zip"
-    sha256 "1d12629dc83d1fc5bcefa0e13604fbdc000492a27a689178dc2b1578a70361a0"
+    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.1/tetris-tui-0.2.1-aarch64-unknown-linux-gnu.zip"
+    sha256 "93c98d4ae2cfd0d7c9b91eac65b2fcd0bfd697d940ae365490cd7266273fddd6"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.0/tetris-tui-0.2.0-x86_64-unknown-linux-gnu.zip"
-    sha256 "71504b638e9ffa7ee57c3667491cf79d14daa7810d46d8218b059def4d9dc885"
+    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.1/tetris-tui-0.2.1-x86_64-unknown-linux-gnu.zip"
+    sha256 "c860e713dce01c7ef5a4515bf2a063dd5346abe048015e9d503884a0c4811db5"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.0/tetris-tui-0.2.0-aarch64-apple-darwin.zip"
-    sha256 "a9c109aca6d1e968cabad997e0bf1944882eb89aba7bc9b737986fba5d81c0c4"
+    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.1/tetris-tui-0.2.1-aarch64-apple-darwin.zip"
+    sha256 "d7fcb93706e126f50700961c97929abb31c34caa74ea8353f0bdd9c30796cb35"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.0/tetris-tui-0.2.0-x86_64-apple-darwin.zip"
-    sha256 "1108410b5fe964b05571dcb02ae6663fa2b6b46a5dacc9c36ae87211829e52c4"
+    url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.1/tetris-tui-0.2.1-x86_64-apple-darwin.zip"
+    sha256 "421b6048f1de78ff0bbfe02bb7ae29a700f4ffb198b511291f47e092b6517423"
   end
 
 
@@ -31,6 +31,6 @@ class TetrisTui < Formula
 
   test do
     output = shell_output("#{bin}/tetris-tui --version")
-    assert_match "0.2.0", output
+    assert_match "0.2.1", output
   end
 end
