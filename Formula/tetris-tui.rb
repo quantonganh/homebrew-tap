@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.10.0 at 2024-01-12T07:55:21.491389165Z
+# Generated with JReleaser 1.10.0 at 2024-01-12T08:31:23.115234417Z
 
 class TetrisTui < Formula
   desc "Play tetris in the terminal"
@@ -8,19 +8,19 @@ class TetrisTui < Formula
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.10/tetris-tui-0.2.10-aarch64-unknown-linux-gnu.zip"
-    sha256 "d42402f1da96d104fe211b1de895e661153dda0edd148fff22fc110d2fb83951"
+    sha256 "07e1d956625677107b74148adbbc5178970ca552eb0c524687d43b4ec1723b51"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.10/tetris-tui-0.2.10-x86_64-unknown-linux-gnu.zip"
-    sha256 "e9fccee2e76514e3602098377694eb34b221ca495f3124097fc5a9d0f1d98843"
+    sha256 "82e40cbb5febf9cec3651b169755879a10fec0932f717b9032fb43b37a002d6d"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.10/tetris-tui-0.2.10-aarch64-apple-darwin.zip"
-    sha256 "07482d3a0c15b3d18f82bfd9a57452e1e017e31250c06749bc2f6462d2ed4e11"
+    sha256 "536f6baa488f881a7d227d0bcb988fd8ec202006036f90c2ab2b06566bd82887"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/quantonganh/tetris-tui/releases/download/v0.2.10/tetris-tui-0.2.10-x86_64-apple-darwin.zip"
-    sha256 "d29541dcf7281061ac41813418d802cde1a102f7050ebbba7bc03e56481a0c3b"
+    sha256 "5cd828dd22493ca5e18f2b00de3c97a4d4aa13ac26cc5f17bbae506f39ef79ff"
   end
 
 
