@@ -5,13 +5,13 @@
 class HelixWezterm < Formula
   desc "Turning Helix into an IDE with the help of WezTerm and CLI tools"
   homepage "https://github.com/quantonganh/helix-wezterm"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.4/helix-wezterm_Darwin_arm64.tar.gz"
-    sha256 "9415169166837456a896b5abf24e33446936bc83e0daed02772a1861fd77c72a"
+    url "https://github.com/quantonganh/helix-wezterm/releases/download/v0.0.5/helix-wezterm_Darwin_arm64.tar.gz"
+    sha256 "663f6e9c73c4f962ad44bf087b765a8856a78fa446928173999266459aa7c278"
 
     def install
       bin.install "helix-fzf.sh"
