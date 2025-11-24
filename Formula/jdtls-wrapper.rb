@@ -5,21 +5,21 @@
 class JdtlsWrapper < Formula
   desc "A Java language server wrapper for Helix editor."
   homepage "https://github.com/quantonganh/jdtls-wrapper"
-  version "25.11"
+  version "25.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11/jdtls-wrapper_Darwin_x86_64.tar.gz"
-      sha256 "5b14d70ed901561bb2f3a3faf88d986fc0c1ac93a12092d15370f3e1314e9e4d"
+      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11.1/jdtls-wrapper_Darwin_x86_64.tar.gz"
+      sha256 "3cc8e33791e82ef7e2ddeabf0ca4f75273708da46dffb42b7e0c5174cab13645"
 
       def install
         bin.install "jdtls-wrapper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11/jdtls-wrapper_Darwin_arm64.tar.gz"
-      sha256 "32275d1aee25ab4728364089d18ef45964b1053cc25446a20395e18b64ff8a3c"
+      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11.1/jdtls-wrapper_Darwin_arm64.tar.gz"
+      sha256 "c392009326846413f56dc36fb7b48bf90b19d052ad47deb73e51ddea9f8dc182"
 
       def install
         bin.install "jdtls-wrapper"
@@ -29,15 +29,15 @@ class JdtlsWrapper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11/jdtls-wrapper_Linux_x86_64.tar.gz"
-      sha256 "ed582e7dab4dc4fe14a3833f209b2294abb582ea51c54997ade0206b0d4b1e79"
+      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11.1/jdtls-wrapper_Linux_x86_64.tar.gz"
+      sha256 "bd7e39e1f508707149af254a0fd10a0c1dd0c0526fde192eef7c7ef0fb330290"
       def install
         bin.install "jdtls-wrapper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11/jdtls-wrapper_Linux_arm64.tar.gz"
-      sha256 "fc1281f2514d7756c99a851920a94557fdb9fcec42829e19c94f49455b9be219"
+      url "https://github.com/quantonganh/jdtls-wrapper/releases/download/25.11.1/jdtls-wrapper_Linux_arm64.tar.gz"
+      sha256 "0e017c5352fbbba5136557bc4f539b8dcaf09160434e0087066ecd7a01a74680"
       def install
         bin.install "jdtls-wrapper"
       end
